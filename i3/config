@@ -163,17 +163,16 @@ bar {
     	#font pango:Envy Code R 10
     	workspace_buttons yes
     	colors {
-		background #080808
-		statusline #808080
-		separator #303030
-		# border background text
-		focused_workspace  #597bc5 #080808 #ffffff
-		active_workspace   #040404 #080808 #ffffff
-		inactive_workspace #202020 #080808 #808080
-		urgent_workspace   #ac4142 #080808 #ffffff
+		    background #080808
+		    statusline #808080
+		    separator #303030
+		    # border background text
+		    focused_workspace  #597bc5 #080808 #ffffff
+		    active_workspace   #040404 #080808 #ffffff
+		    inactive_workspace #202020 #080808 #808080
+		    urgent_workspace   #ac4142 #080808 #ffffff
     	}
     	status_command $HOME/scripts/conky-i3bar
-    	#status_command py3status -c ~/.i3status.conf -i ~/.i3/p3smodules
 }
 
 # volume
@@ -182,5 +181,5 @@ bindsym XF86AudioLowerVolume exec "amixer -q -D pulse set Master 5%- unmute; kil
 bindsym XF86AudioMute exec amixer -q -D set Master toggle
 
 # brightness
-bindsym XF86MonBrightnessUp exec "~/bin/config brightness +5"
-bindsym XF86MonBrightnessDown exec "~/bin/config brightness -5"
+bindsym XF86MonBrightnessUp exec "light -A 10"
+bindsym XF86MonBrightnessDown exec "light -U 10"
